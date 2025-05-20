@@ -1,9 +1,9 @@
 import requests
 
-# Server URL (update with your Flask server's IP or hostname)
+# Server URL 
 SERVER_URL = "http://192.168.1.6:5050/predict_from_url"
 
-# Path to the image file you want to send
+# Path to the image to be send
 IMAGE_PATH = r"E:\Pytorch\pretrained\DV.jpeg"
 
 # Send the image as a file
