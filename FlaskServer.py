@@ -11,7 +11,6 @@ def upload_file():
     if file.filename == "":
         return jsonify({"error": "No file selected"}), 400
 
-    # Optionally save the file or process it
     # file.save(f"./uploads/{file.filename}")
     
     return jsonify({"message": f"File '{file.filename}' uploaded successfully"}), 200
