@@ -17,6 +17,7 @@
     "express": "^4.21.2",
     "mongoose": "^8.9.5",
     "serialport": "^13.0.0",
+    "server": "file:",
     "ws": "^8.18.0"
   },
   "devDependencies": {

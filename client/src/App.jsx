@@ -5,8 +5,6 @@ import Register_login from './Pages/Register_login/Register_login'
 import Home from './Pages/Home/Home'
 import Disease from './Pages/Disease/Disease';
 function App() {
-
-
   return (
     <>
      <Router>

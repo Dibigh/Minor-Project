@@ -19,7 +19,7 @@ const wsServerPort = 5500;
 const wss = new WebSocket.Server({ port: wsServerPort });
 
 
-console.log(`WebSocket server is running on ws://172.16.31.14:${wsServerPort}`);
+console.log(`WebSocket server is running on ws://172.16.28.129:${wsServerPort}`);
 let esp32Client = null;
 let reactClient = null;
 wss.on('connection', (ws) => {

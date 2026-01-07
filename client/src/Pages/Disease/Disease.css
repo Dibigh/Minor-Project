@@ -44,3 +44,19 @@ div#disease {
         justify-content: center;
         height: 30px;
 }
+.Disease-Display
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    height:100px;
+    width: 100%;
+    background-color: aqua;
+}
+.Disease-btn
+{
+    height: 15px;
+    width: 100;
+    padding: 10px;
+}

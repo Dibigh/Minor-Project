@@ -20,6 +20,7 @@ function Disease() {
         if (!selectedImage) {
             setMessage('Please select an image.');
             return;
+            Detection();
         }
 
         const formData = new FormData();
@@ -60,10 +61,13 @@ function Disease() {
     </form>
     </div>
     <div id='formmessage'>
-    {message && <p>{message}</p>}
-    </div>
-</div>
-</div>
+    {message && <p>{message.message}{message.disease}</p>}
+
+ </div>
+ </div>
+ </div>
+
+
   )
 }
 

@@ -6,5 +6,4 @@ console.log('database connected sucessfully')).catch((error)=>
 console.log('database connection error'))
 }
 
-
 module.exports = connectDB;

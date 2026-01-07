@@ -52,7 +52,7 @@ function Home() {
 
     if(buttonstate1==true||buttonstate2==true||buttonstate3==true){
 
-    const checkValueInRange = (value,min,max,identifier) => {
+const checkValueInRange = (value,min,max,identifier) => {
 
       if (value >= min && value <= max) {
         if(identifier=='soilMoisture'){
@@ -68,16 +68,32 @@ function Home() {
       }
      else {
         if(identifier=='soilMoisture'){
+          if(value<min){
           sendCommand('WATERPUMP_ON')
+          }
+          else{
+            sendCommand('WATERPUMP_OFF')
+            }
         }
         if(identifier=='temperature'){
-          sendCommand('FAN_ON')
+          if(value<min){
+            sendCommand('FAN_OFF')
+            }
+            else{
+              sendCommand('FAN_ON')
+              }
         }
         if(identifier=='humidity'){
-          sendCommand('HUMIDIFIER_ON')
+          if(value<min){
+            sendCommand('HUMIDIFIER_ON')
+            }
+            else{
+              sendCommand('HUMIDIFIER_OFF')
+              }
         }
         console.log('Value is out of the range');
-      }}
+      }
+    }
 
      
         if(buttonstate1==true){
@@ -134,7 +150,7 @@ if(buttonstate3==false && intervalid3){
 
   useEffect(() => {
   const connectWebSocket=()=> {
-    const ws = new WebSocket('ws://172.16.31.14:5500');
+    const ws = new WebSocket('ws://172.16.28.129:5500');
       setWebs(ws)
     ws.onopen = () => {
       console.log('Connected to WebSocket server.');
